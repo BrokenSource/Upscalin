@@ -1,0 +1,22 @@
+[tool.poetry]
+name        = "Upscalin"
+version     = "2024.2.5"
+description = "A Convenience Multi-Upscalers for Video, Images. Batch Processing, Multithreaded."
+authors     = ["Tremeschin <tremeschin@users.noreply.github.com>"]
+license     = "AGPLv3-only"
+
+[[tool.poetry.packages]]
+include = "Upscalin"
+
+[build-system]
+requires      = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+
+[tool.poetry.dev-dependencies]
+broken-source = {path="../../", develop=true}
+
+[tool.poetry.scripts]
+upscalin = "Upscalin.__main__:main"
