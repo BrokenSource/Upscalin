@@ -8,15 +8,16 @@ license     = "AGPLv3-only"
 [[tool.poetry.packages]]
 include = "Upscalin"
 
+[tool.poetry.scripts]
+main = "Upscalin.__main__:main"
+
 [build-system]
 requires      = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
+python-magic = "^0.4.27"
 
 [tool.poetry.dev-dependencies]
 broken-source = {path="../../", develop=true}
-
-[tool.poetry.scripts]
-upscalin = "Upscalin.__main__:main"
