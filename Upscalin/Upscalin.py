@@ -76,7 +76,7 @@ class Upscalin(BrokenApp):
         # Find Video properties
         total_frames = BrokenFFmpeg.get_total_frames(input, echo=False)
         resolution   = BrokenFFmpeg.get_resolution(input, echo=False)
-        duration     = BrokenFFmpeg.get_duration(input, echo=False)
+        duration     = BrokenFFmpeg.get_video_duration(input, echo=False)
         framerate    = total_frames/duration
 
         # Find the final upscaled resolution
