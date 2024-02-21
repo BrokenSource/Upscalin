@@ -4,7 +4,7 @@ UPSCALIN_ABOUT = """
 🍷A Convenience Multi-Upscalers for Video, GIF, Images. Batch Processing, Multithreaded
 • Tip: run "upscalin --help" for More Options ✨
 
-©️ 2023 Broken Source Software, AGPLv3-only License.
+©️ Broken Source Software, AGPLv3-only License.
 """
 
 @define
