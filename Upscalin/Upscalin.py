@@ -40,9 +40,9 @@ class Upscalin(BrokenApp):
     # Upscalin methods
 
     def upscale(self,
-        input:  Annotated[Path, typer.Option("-i", "--input",  help="Input File (Image, Video, GIF) or Directory to Upscale")],
-        output: Annotated[Path, typer.Option("-o", "--output", help="Output File or Directory to Save the Upscaled content")]=None,
-        thread: Annotated[int,  typer.Option("-t", "--thread", help="Number of Threads to use for Upscaling")]=5,
+        input:  Annotated[Path, TyperOption("-i", "--input",  help="Input File (Image, Video, GIF) or Directory to Upscale")],
+        output: Annotated[Path, TyperOption("-o", "--output", help="Output File or Directory to Save the Upscaled content")]=None,
+        thread: Annotated[int,  TyperOption("-t", "--thread", help="Number of Threads to use for Upscaling")]=5,
     ):
         for file in (input.iterdir()) if input.is_dir() else [input]:
             self.__upscale__(input=file, output=output, thread=thread)
@@ -129,7 +129,7 @@ class Upscalin(BrokenApp):
         for index, frame in enumerate(BrokenFFmpeg.get_frames(input)):
             BrokenThread.new(
                 target=__upscale_image_thread__,
-                frame=copy.deepcopy(frame),
+                frame=copy.copy(frame),
                 index=index,
                 pool=str(id(self)),
                 max=thread,
