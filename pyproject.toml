@@ -3,7 +3,7 @@ name        = "Upscalin"
 version     = "2024.2.6"
 description = "A Convenience Multi-Upscalers for Video, Images. Batch Processing, Multithreaded."
 authors     = ["Tremeschin <tremeschin@users.noreply.github.com>"]
-license     = "AGPLv3-only"
+license     = "AGPL-3.0-only"
 
 [[tool.poetry.packages]]
 include = "Upscalin"
