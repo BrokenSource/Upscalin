@@ -1,14 +1,11 @@
-import magic
-from PIL import ImageFile
-
-ImageFile.LOAD_TRUNCATED_IMAGES = True
-
-from Broken import *
+import Upscalin.Resources as UpscalinResources
+from Broken import BrokenProject
 
 UPSCALIN = BrokenProject(
     PACKAGE=__file__,
     APP_NAME="Upscalin",
     APP_AUTHOR="BrokenSource",
+    RESOURCES=UpscalinResources,
 )
 
-from Upscalin.Upscalin import *
+from Upscalin.Logic import Upscalin

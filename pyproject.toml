@@ -1,23 +1,17 @@
-[tool.poetry]
-name        = "Upscalin"
-version     = "2024.2.6"
+[project]
+name        = "upscalin"
+version     = "0.0"
 description = "A Convenience Multi-Upscalers for Video, Images. Batch Processing, Multithreaded."
-authors     = ["Tremeschin <tremeschin@users.noreply.github.com>"]
-license     = "AGPL-3.0-only"
+authors     = [{name="Tremeschin", email="29046864+Tremeschin@users.noreply.github.com"}]
+readme      = "Readme.md"
+license     = "AGPL-3.0"
 
-[[tool.poetry.packages]]
-include = "Upscalin"
+[tool.rye]
+managed = true
 
-[tool.poetry.scripts]
-main = "Upscalin.__main__:main"
+[tool.hatch.build.targets.wheel]
+packages = ["Upscalin"]
 
 [build-system]
-requires      = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.dependencies]
-python = ">=3.10,<3.13"
-python-magic = "^0.4.27"
-
-[tool.poetry.dev-dependencies]
-broken-source = {path="../../", develop=true}
+requires      = ["hatchling"]
+build-backend = "hatchling.build"

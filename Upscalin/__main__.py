@@ -1,10 +1,13 @@
-from Upscalin import *
+import sys
+
+from Broken import BrokenProfiler
+from Upscalin import Upscalin
 
 
 def main():
-    UPSCALIN.welcome()
-    app = Upscalin()
-    app.cli()
+    with BrokenProfiler("UPSCALIN"):
+        upscalin = Upscalin()
+        upscalin.cli()
 
 if __name__ == "__main__":
     main()
