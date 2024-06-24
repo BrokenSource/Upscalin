@@ -72,7 +72,7 @@ class Upscalin(BrokenApp):
             ofile = (output/ifile.name) if output.is_dir() else output
             mime = self.mime.from_file(ifile)
 
-            log.info(f"Upscaling file {mime} ({ifile}) -> ({ofile})")
+            log.info(f"Upscaling file ({mime} @ {ifile}) → ({ofile})")
 
             if mime.startswith("video") or mime.startswith("image/gif"):
                 artifacts.append(self._upscale_video(ifile, ofile))
@@ -99,7 +99,7 @@ class Upscalin(BrokenApp):
 
         # Raw copy original audio to a raw pipe input
         ffmpeg = (BrokenFFmpeg(time=duration).quiet()
-            .pipe(pixel_format="rgb24", width=width, height=height, framerate=framerate)
+            .pipe_input(pixel_format="rgb24", width=width, height=height, framerate=framerate)
             .input(input)
             .copy_audio()
             .output(path=output)
@@ -133,6 +133,8 @@ class Upscalin(BrokenApp):
                 max=self.threads,
             )
 
+        # Wait for all threads to finish
+        BrokenThread.pool(str(id(self))).join()
         progress_bar.close()
-        ffmpeg.close()
+        ffmpeg.stdin.close()
         return output
