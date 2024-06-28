@@ -54,8 +54,8 @@ class Upscalin(BrokenApp):
         self.typer.command(self.config)
 
         with self.typer.panel("⭐️ Upscalers"):
-            self.typer.command(pydantic_cli(Realesr(), post=self.add_upscaler), name="realesr", requires=True)
-            self.typer.command(pydantic_cli(Waifu2x(), post=self.add_upscaler), name="waifu2x", requires=True)
+            self.typer.command(pydantic_cli(Realesr(), post=self.add_upscaler), name="realesr", naih=True)
+            self.typer.command(pydantic_cli(Waifu2x(), post=self.add_upscaler), name="waifu2x", naih=True)
 
         self.typer.app.info.chain = True
         self.typer(sys.argv[1:])
