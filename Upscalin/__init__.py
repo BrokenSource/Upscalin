@@ -48,7 +48,7 @@ class Upscalin(BrokenApp):
     def add_upscaler(self, upscaler: BrokenUpscaler):
         self.upscalers.append(upscaler)
 
-    def cli(self) -> None:
+    def main(self) -> None:
         self.typer.description = UPSCALIN_ABOUT
         self.typer.command(self.input)
         self.typer.command(self.config)
