@@ -1,3 +1,9 @@
+[project.urls]
+issues        = "https://github.com/BrokenSource/Upscalin/issues"
+repository    = "https://github.com/BrokenSource/Upscalin"
+documentation = "https://brokensrc.dev/upscalin"
+homepage      = "https://brokensrc.dev"
+
 [project]
 name        = "upscalin"
 version     = "0.0.0"
@@ -6,7 +12,7 @@ authors     = [{name="Tremeschin", email="29046864+Tremeschin@users.noreply.gith
 readme      = "Readme.md"
 license     = "AGPL-3.0"
 dependencies = [
-    "broken-source", # dynamic
+    "broken-source>=0.0.0",
 ]
 
 [tool.rye]
