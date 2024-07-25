@@ -1,4 +1,6 @@
-<sup>⚠️ **Warning**: This repository [**shouldn't be cloned alone**](https://brokensrc.dev/get/source), per [**monorepo**](https://github.com/BrokenSource/BrokenSource) structure</sup>
+> [!IMPORTANT]
+> <sub>This repository is part of a [**monorepo**](https://github.com/BrokenSource/BrokenSource) and [**shouldn't be cloned alone**](https://brokensrc.dev/get/source)</sub>
+
 <div align="center">
   <a href="https://brokensrc.dev/upscalin"><img src="https://raw.githubusercontent.com/BrokenSource/Upscalin/Master/Upscalin/Resources/Images/Upscalin.png" width="200"></a>
   <h1>Upscalin</h1>
