@@ -25,7 +25,6 @@ from Broken import BrokenApp, BrokenThread, log, pydantic_cli
 from Broken.Externals.FFmpeg import BrokenFFmpeg
 from Broken.Externals.Upscaler import BrokenUpscaler, Realesr, Waifu2x
 from Broken.Loaders.LoaderImage import LoadableImage
-from Upscalin import UPSCALIN
 
 UPSCALIN_ABOUT = """
 🍷A Convenience Multi-Upscalers for Video, GIF, Images. Batch Processing, Multithreaded
